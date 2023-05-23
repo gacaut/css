@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+*
+{
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin_Sans';
+}
+.navegacion{
+    position: relative;
+    width: 275px;
+    height: 70px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.navegacion ul{
+    display: flex;
+    width: 350px;
+}
+.navegacion ul li{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 110px;
+    z-index: 1;
+}
+.navegacion ul li a{
+    color: black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+.navegacion ul li a .icono{
+    position: relative;
+    display: block;
+    line-height: 50px;
+    font-size: 1.5em;
+    transition: 0.5s;
+}
+.navegacion ul li.active a .icono{
+    transform: translateY(35px);
+}
+.navegacion ul li a .texto{
+    position: absolute;
+    font-weight: 400px;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+.navegacion ul li.active a .texto{
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
+.indicador{
+    position: absolute;
+    top: 50%;
+    width: 70px;
+    height: 70px;
+    background: greenyellow;
+    border-radius: 50%;
+    border: 6px solid #212534;
+    transition: 0.5s;
+}
+.indicador::before{
+    content: "";
+    position: absolute;
+    top: 16%;
+    left: -20px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 10px 0 0 #212534;
+}
+.indicador::after{
+    content: "";
+    position: absolute;
+    top: 16%;
+    left: 60px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0px 10px 0 0 #212534; 
+}
+.navegacion ul li:nth-child(1).active ~ .indicador{
+    transform: translateX(calc(70px*0));
+}
+.navegacion ul li:nth-child(2).active ~ .indicador{
+    transform: translateX(calc(70px*1));
+}
+.navegacion ul li:nth-child(3).active ~ .indicador{
+    transform: translateX(calc(70px*2));
+}
+.navegacion ul li:nth-child(4).active ~ .indicador{
+    transform: translateX(calc(70px*3));
+}
+/* navegacion */
+/* lista */
+/* icono */
+/* texto */
+/* indicador */

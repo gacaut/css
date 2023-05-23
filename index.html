@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="boton.css">
+    <link rel="stylesheet" href="overlay.css">
+    <link rel="stylesheet" href="barranav.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class ="card">
+        patagonia
+    </div>
+
+    <div class="overlay">
+        imagen panel solar
+    </div>
+
+    <br>
+
+    <div class="navegacion">
+        <ul>
+            <li class="list active">
+                <a href="#">
+                    <span class="icono">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="texto">Home</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icono">
+                        <ion-icon name="flag-outline"></ion-icon>
+                    </span>
+                    <span class="texto">mision</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icono">
+                        <ion-icon name="extension-puzzle-outline"></ion-icon>
+                    </span>
+                    <span class="texto">para ti</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icono">
+                        <ion-icon name="pricetag-outline"></ion-icon>
+                    </span>
+                    <span class="texto">tienda</span>
+                </a>
+            </li>
+            <div class="indicador"></div>
+        </ul>
+    </div>
+
+    <br>
+
+    <h1>Contribuye al <br>
+    <span class="cambiante"></span></h1>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script> var typingEffect = new Typed(".cambiante",{
+        strings: ["Ambiente","Futuro"],
+        loop: true,
+        typeSpeed: 30,
+        backSpeed: 30,
+        backDelay: 2500
+    })
+    </script>
+
+    <script>
+        const list = document.querySelectorAll(".list");
+        function activeLink(){
+        list.forEach((item) =>
+        item.classList.remove("active"));
+        this.classList.add("active");
+        }
+        list.forEach((item) =>
+        item.addEventListener("click",activeLink));
+    </script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
